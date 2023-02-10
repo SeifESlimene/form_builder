@@ -53,7 +53,6 @@ router.post('/order/add/', async (req, res, next) => {
     const order = new Order({order: req.body});
     const createdOrder = await order.save();
     res.json(createdOrder);
-    console.log(createdOrder);
   } catch (error) {
     console.log(error.name);
     if (error.name === 'ValidationError') {

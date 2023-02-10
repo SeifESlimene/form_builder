@@ -36,7 +36,6 @@ function Checkout() {
       },
       body: JSON.stringify({ ...data, idanimal: id }),
     }).then(res => {
-      console.log(res);
 
       setAlert(true);
     });
@@ -52,7 +51,6 @@ function Checkout() {
     for (var i = 1; i <= form[0].range; i++) {
       ages.push(<option key={i}>{i}</option>);
     }
-    console.log('hh',ages);
 
     return ages;
   };

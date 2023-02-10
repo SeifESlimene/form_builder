@@ -8,9 +8,13 @@ require('dotenv').config();
 
 const cors = require('cors');
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
-}
+// console.log({ NODE_ENV: process.env.NODE_ENV })
+
+app.use(cors());
+
+// if (process.env.NODE_ENV === 'development') {
+//   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+// }
 
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome To Our Pet Shop!' });
